@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "aqua" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Sadie's Data Science!"
+title                    : "Sadie's AI & Data Science!"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Sadie"
@@ -104,11 +104,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Sadie"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
+  bio              : "An explorer passionate about digital well-being and HCI. Dedicated to creating human-centered AI services."
+  location         : "South Korea"
+  email            : sh.sadiehan@gmail.com
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
