@@ -12,6 +12,7 @@ toc: true
 last_modified_at: 2024-12-03
 thumbnail: ../assets/TIL.jpg
 ---
+![](/images/../images/2024-12-04-11-03-02.png)
 
 # 데이터 변형: 정렬과 병합
 ## 정렬

@@ -12,6 +12,7 @@ toc: true
 last_modified_at: 2024-11-28
 thumbnail: ../assets/TIL.jpg
 ---
+![](/images/../images/2024-12-04-11-03-02.png)
 
 # 1. 모듈(Module)
 - 모듈: 파이썬 코드를 재사용하기 위해 작성된 **파일**

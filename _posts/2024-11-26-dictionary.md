@@ -12,6 +12,7 @@ toc: true
 last_modified_at: 2024-11-26
 thumbnail: ../assets/TIL.jpg
 ---
+![](/images/../images/2024-12-04-11-03-02.png)
 # 딕셔너리란?
 - 키-값 쌍으로 구성된 가변 자료형
 
