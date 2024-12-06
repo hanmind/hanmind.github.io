@@ -7,11 +7,11 @@ excerpt: "__init__ 함수의 역할 분리
 categories:
   - TIL
 tags:
-  - [TIL, 내일배움캠프, 스파르타내일배움캠프, AI, 파이썬, 라이브러리, 판다스, 데이터프레임, 정렬, 병합]
+  - [TIL, 내일배움캠프, 스파르타내일배움캠프, AI, 파이썬, init함수, return, break, VSCode, 단축키]
 
 toc: true
 
-last_modified_at: 2024-12-04
+last_modified_at: 2024-12-05
 thumbnail: ../images/2024-12-04-11-03-02.png
 ---
 ![](/images/../images/2024-12-04-11-03-02.png)
@@ -115,6 +115,7 @@ game()
 
 - [break 랑 return 이랑 차이가 무엇인가요? - 인프런](https://www.inflearn.com/community/questions/747573/break-%EB%9E%91-return-%EC%9D%B4%EB%9E%91-%EC%B0%A8%EC%9D%B4%EA%B0%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94?srsltid=AfmBOopLNuPzLUWxpiD0GskhZCL0r_jRIq2G9GRoFVMj-HH_Sqfq8kxp)
 - [break, continue, return 차이 - SOOBIN](https://velog.io/@subin0214/break-continue-return-%EC%B0%A8%EC%9D%B4)
+
 위 게시물들에서는 return을 **값을 반환하는 명령어**이기도 하지만, **함수를 종료하는 명령어**이기도 하다고 설명하고 있다.
 
 챗지피티에게도 물어보았다.
