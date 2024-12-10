@@ -84,6 +84,7 @@ df.loc[df['column_with_na'].isnull(), 'column_with_na'] = predicted_values
 - 데이터가 일부 누락된 열: 'column_with_na' -> 종속 변수 y
 
 🔎 궁금한 점: 결국 데이터 전처리를 하는 목적은 머신러닝/딥러닝을 하기 위함인데, 결측치를 머신러닝으로 채워넣어도 되는가? 머신러닝 모델로 결측값을 예측해 처리하면 성능이 향상될까, 아니면 왜곡될 가능성이 있을까?
+
 ChatGPT 답변:
 ```
 - 논문/연구 사례:
