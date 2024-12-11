@@ -35,8 +35,8 @@ h6 {
 
 h1 {
   margin-top: 0;
-  // font-size: $h-size-1;
-  font-size: 24px; /* 기존 $h-size-1 값을 구체적으로 설정 */
+  font-size: $h-size-1;
+  // font-size: 28px; /* 기존 $h-size-1 값을 구체적으로 설정 */
 }
 
 h2 {
@@ -66,6 +66,7 @@ small,
 
 p {
   margin-bottom: 1.3em;
+  font-size: 14px; /* 글씨 크기를 줄임 */
 }
 
 u,
