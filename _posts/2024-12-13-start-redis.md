@@ -1,5 +1,5 @@
 ---
-title:  "(TIL) Redis 입문 - 설치부터 캐싱 사용 전략까지"
+title:  "(WIL) Redis 입문 - 설치부터 캐싱 사용 전략까지"
 excerpt: "Redis란?
 : 데이터 처리 속도가 엄청 빠른 NoSQL 데이터베이스
 - NoSQL 데이터베이스: Key-Value의 형태로 데이터를 저장하는 데이터베이스"
@@ -7,7 +7,7 @@ excerpt: "Redis란?
 categories:
   - TIL
 tags:
-  - [TIL, 내일배움캠프, 스파르타내일배움캠프, AI, 파이썬, 리눅스, 우분투, NoSQL, Redis, 캐시, 캐싱]
+  - [TIL, 내일배움캠프, 스파르타내일배움캠프, WIL, AI, 파이썬, 리눅스, 우분투, NoSQL, Redis, 캐시, 캐싱]
 
 toc: true
 
