@@ -54,7 +54,7 @@ UNIX라는 운영 체제에서 영향을 받아 개발된 운영 체제인데, �
 참고자료 - [[Linux/Ubuntu] 리눅스와 우분투는 무엇일까?](https://sseozytank.tistory.com/76)
 
 `redis-cli`: Redis CLI 실행 
--> 우분투 명령창??에 redis-cli를 실행시켜보자. 무슨 경로??같은게 바뀌는 걸 볼 수 있다. 이후 ping을 입력하여서 PONG이 출력되면 redis가 잘 실행된다는 뜻이다.
+-> 우분투 명령창에 redis-cli를 실행시켜보자. ping을 입력하여서 PONG이 출력되면 redis가 잘 실행된다는 뜻이다.
 
 ## Redis 기본 명령어
 레디스로 조회 성능을 개선하는 데 알아두어야 할 핵심 명령어 7가지만 익히자.  다른 명령어들은 나중에 레디스를 쓰면서 필요한 기능이 더 생겼을 때 직접 찾으며 배우면 된다.
@@ -123,9 +123,11 @@ Redis에서 Key를 정의할 때는 **콜론(:)**을 이용해 **계층적으로
 
 ### 1. Cache Aside (= Look Aside, Lazy Loading) 전략
 - Cache Aside 전략: 먼저 **캐시**에서 데이터를 확인하고, 없다면 DB를 통해 조회해오는 방식
-- 데이터를 어떻게 **조회**할 지에 대한 전략!
+- 데이터를 어떻게 **조회**할 지에 대한 전략!   
+
 (1) 캐시에 데이터가 있을 경우(Cache Hit)
 ![](/images/../images/Cache%20Hit.png)
+
 (2) 캐시에 데이터가 없을 경우(Cache Miss)
 ![](/images/../images/Cache%20Miss.png)
 
