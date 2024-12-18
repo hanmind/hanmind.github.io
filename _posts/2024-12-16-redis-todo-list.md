@@ -30,10 +30,9 @@ expire	|키에 TTL을 설정하여 데이터의 만료 시간 지정
 ```py
 r.lpush("list_name", task)
 ```
-
 - `list_name`: 리스트의 이름. 여기서는 "tasks"를 지정
 
-(1) `lrange`
+(2) `lrange`
 ```py
 r.lrange("list_name", start, end)
 ```
@@ -42,7 +41,7 @@ r.lrange("list_name", start, end)
 - `start`: 조회 시작 인덱스입니다. 0은 리스트의 첫 번째 요소를 의미
 - `end`: 조회 종료 인덱스. -1은 리스트의 마지막 요소를 의미
 
-(2) `lrem`
+(3) `lrem`
 ```py
 r.lrem("list_name", count, value)
 ```
@@ -56,12 +55,12 @@ r.lrem("list_name", count, value)
 - 예시: `r.lrem("tasks", 1, "설거지하기")`
     - `tasks` 리스트에서 "설거지하기"라는 값을 하나만 찾아 삭제
 
-(3) `expire`
+(4) `expire`
 ```py
 r.expire("key_name", time_in_seconds)
 ```
 - `key_name`: TTL을 설정할 키의 이름. 여기서는 리스트 이름인 "tasks"을 지정하여 리스트 전체에 대해 TTL이 설정되었음.
-    - ※ B*리스트*에서는 **개별 항목**에 대해 TTL을 설정할 수 없다는 것 같다. 따라서 일정 시간이 지나면 리스트 전체가 삭제된다.
+    - ※ *리스트*에서는 **개별 항목**에 대해 TTL을 설정할 수 없다는 것 같다. 따라서 일정 시간이 지나면 리스트 전체가 삭제된다.
 - `time_in_seconds`: 데이터가 살아있는 시간을 초 단위로 지정
 
 ## 전체 코드(`main.py`)
