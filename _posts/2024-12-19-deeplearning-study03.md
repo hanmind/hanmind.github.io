@@ -64,7 +64,8 @@ Q. 그러면 unigram은 어떻게 되는 건지.?
 
 ### n-gram의 한계
 ![](/images/../images/2024-12-19-19-24-31.png)
-
-(an adorable little) boy is spreading -> insulting?!
-
-앞의 단어 몇 개만 보다 보니 의도하고 싶은 대로 문장을 끝맺음하지 못하는 경우가 생긴다
+n=4일 때, 앞 세 개의 단어만 고려시 boy is spreading 뒤에 등장할 확률이 높은 단어는 insulting이다. 그런데 그 앞에 있었던 표현을 포함해서 다시 문장을 읽어보자:
+(An adorable little) boy is spreading insulting
+❗ 앞의 단어 몇 개만 보다 보니 의도하고 싶은 대로 문장을 끝맺음하지 못하는 경우가 생긴다.
+- (1) 희소 문제(Sparsity Problem)
+- (2) n을 선택하는 것은 trade-off 문제
