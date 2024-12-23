@@ -1,19 +1,19 @@
 ---
-title:  "딥러닝 - 02"
-excerpt: ""
+title:  "딥러닝 - 02. 텍스트 전처리"
+excerpt: "토큰화
+- 코퍼스를 토큰 단위로 나누는 작업
+- 토큰의 단위는 단어, 문장 등 다양하며, **의미 있는 단위**로 정의됨."
 
 categories:
   - Deep Learning
 tags:
-  - [AI, 딥러닝, 파이썬]
+  - [AI, 딥러닝, 파이썬, 자연어 처리, NLP, TIL]
 
 toc: true
 
 last_modified_at: 2024-12-19
 thumbnail: ../images/2024-12-04-11-03-02.png
 ---
-
-# [01. 자연어 처리](https://hanmind.github.io/deep_learning/deeplearning-study01/)
 
 # 02. 텍스트 전처리
 ## 토큰화
@@ -316,3 +316,6 @@ print(one_hot)
 단점:
 - 단어의 개수가 늘어날 수록, 벡터를 저장하기 위해 벡터의 차원이 늘어난다. -> 매우 비효율적인 표현 방법
 - 단어의 **유사도**를 표현하지 못한다.
+
+# 오늘의 회고
+특강이 많아!! 정리할 게 많아!! 점점 밀려가고 있어!! 떠밀려가면 안돼!!!

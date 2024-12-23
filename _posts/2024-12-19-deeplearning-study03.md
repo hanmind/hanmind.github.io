@@ -1,11 +1,11 @@
 ---
-title:  "딥러닝 - 03"
-excerpt: ""
+title:  "딥러닝 - 03. 언어 모델"
+excerpt: "언어 모델(Language Model, LM): 언어라는 현상을 모델링하고자 **단어 시퀀스(문장)에 확률을 할당(assign)하는 모델**"
 
 categories:
   - Deep Learning
 tags:
-  - [AI, 딥러닝, 파이썬]
+  - [AI, 딥러닝, 파이썬, 자연어 처리, NLP]
 
 toc: true
 
@@ -13,7 +13,7 @@ last_modified_at: 2024-12-19
 thumbnail: ../images/2024-12-04-11-03-02.png
 ---
 
-# 언어 모델
+# 03. 언어 모델
 언어 모델(Language Model, LM): 언어라는 현상을 모델링하고자 **단어 시퀀스(문장)에 확률을 할당(assign)하는 모델**
 
 ## 모델링 방법
