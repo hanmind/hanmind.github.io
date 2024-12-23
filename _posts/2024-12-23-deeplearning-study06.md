@@ -46,10 +46,12 @@ thumbnail: ../images/2024-12-04-11-03-02.png
 
 ## 혼동 행렬(Confusion Matrix)
 머신 러닝에서는 맞힌 문제수 / 전체 문제수 값을 정확도(Accuracy)라고 한다. 그런데 정확도는 이 결과에 대한 세부적인 내용을 알려주지는 않는다. 이를 위해서 사용하는 것이 혼동 행렬이다.
+
 실제\예측 | 예측 참 | 예측 거짓
 ---|---|---
 실제 참 | TP | FN
 실제 거짓 | FP | TN
+
 - True Positive(TP) : 실제 True인 정답을 True라고 예측 (정답)
 - True Negative(TN) : 실제 False인 정답을 False라고 예측 (정답)
 - False Positive(FP) : 실제 False인 정답을 True라고 예측 (오답)
@@ -59,19 +61,21 @@ thumbnail: ../images/2024-12-04-11-03-02.png
 모델이 True라고 분류한 것 중에서 실제 True인 것의 비율
 
 ### 재현율(Recall)
-실제 True인 것 중에서 모델이 True라고 예측한 것의 비율
+실제 True인 것 중에서 모델이 True라고 예측한 것의 비율   
 Precision이나 Recall은 모두 실제 True인 정답을 모델이 True라고 예측한 경우. 즉, TP에 관심이 있다.
+
 F1-Score는 나중 챕터에서 설명할 예정이다.
 
 ## 과적합
-모델이 훈련 데이터에 대해서만 과하게 학습하여, 테스트 데이터나 실제 서비스에서는 성능이 좋지 않은 현상
-~[](https://wikidocs.net/images/page/32012/%EC%8A%A4%ED%8C%B8_%EB%A9%94%EC%9D%BC_%EC%98%A4%EC%B0%A8.png)
+모델이 훈련 데이터에 대해서만 과하게 학습하여, 테스트 데이터나 실제 서비스에서는 성능이 좋지 않은 현상   
+![](https://wikidocs.net/images/page/32012/%EC%8A%A4%ED%8C%B8_%EB%A9%94%EC%9D%BC_%EC%98%A4%EC%B0%A8.png)
 과적합 상황에서는 훈련 데이터에 대해서는 오차가 낮지만, 테스트 데이터에 대해서는 오차가 커진다.
 
 ## 과소적합(Underfitting)
 테스트 데이터의 성능이 올라갈 여지가 있음에도 훈련을 덜 한 상태
 - 훈련 횟수(에포크)가 지나치게 적으면 발생
 - 훈련 데이터에 대해서도 정확도가 낮다.
+
 +a. 과적합과 과소 적합이라고 부르는 이유:
 머신러닝에서는 학습 또는 훈련이라고 하는 과정을 **적합(fitting)**이라고도 부른다.
 
@@ -80,9 +84,9 @@ F1-Score는 나중 챕터에서 설명할 예정이다.
 
 ### 경사하강법(Gradient Descent)
 대표적인 옵티마이저의 일종.
-가설 H(x): y = wx
-비용함수: cost(w)
-![](https://wikidocs.net/images/page/21670/%EC%84%A0%ED%98%95%ED%9A%8C%EA%B7%803.JPG)
+가설 H(x): y = wx   
+비용함수: cost(w)   
+![](https://wikidocs.net/images/page/21670/%EC%84%A0%ED%98%95%ED%9A%8C%EA%B7%803.JPG)       
 그림에서 cost가 최소화가 되는 지점은 접선의 기울기, 즉 미분값이 0이 되는 지점이다.
 -> 경사 하강법의 아이디어는 비용 함수(Cost function)를 미분하여 현재 w
 에서의 접선의 기울기를 구하고, 접선의 **기울기가 낮은 방향으로**
@@ -97,7 +101,7 @@ F1-Score는 나중 챕터에서 설명할 예정이다.
 ![시그모이드 함수](https://wikidocs.net/images/page/22881/%EC%8B%9C%EA%B7%B8%EB%AA%A8%EC%9D%B4%EB%93%9C%EA%B7%B8%EB%9E%98%ED%94%84.png)
 ![](https://wikidocs.net/images/page/22881/%EC%8B%9C%EA%B7%B8%EB%AA%A8%EC%9D%B4%EB%93%9C%ED%95%A8%EC%88%98%EC%9D%98%EA%B8%B0%EC%9A%B8%EA%B8%B0%EC%9D%98%EB%B3%80%ED%99%94.png)
 
-형 회귀에서 직선을 표현할 때, 가중치 w
+선형 회귀에서 직선을 표현할 때, 가중치 w
 는 직선의 기울기를 의미했지만 여기서는 그래프의 경사도를 결정.
 w의 값이 커지면 경사가 커지고
 w의 값이 작아지면 경사가 작아진다.
