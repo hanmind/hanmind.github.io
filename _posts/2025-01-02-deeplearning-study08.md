@@ -1,5 +1,5 @@
 ---
-title:  "딥러닝 - 08. 순환 신경망(Recurrent Neural Network)"
+title:  "(TIL) 딥러닝 - 08. 순환 신경망(Recurrent Neural Network)"
 excerpt: ""
 
 categories:
@@ -77,11 +77,60 @@ LSTM은 은닉층의 메모리 셀에 입력 게이트, 망각 게이트, 출력
 
 세 개의 Gate, Cell state 개념이 사용됨.
 
-## 세 개의 Gate
+## 1. 세 개의 Gate 계산
+### Forget gate 
 ![](/images/../../AI-Study-2024/images/2025-01-02-19-28-50.png)
+
+### Input gate
+![](/images/../../AI-Study-2024/images/2025-01-02-19-35-35.png)
+
+### Output gate  
+![](/images/../../AI-Study-2024/images/2025-01-02-19-37-08.png)
+
+=> 세 개의 게이트 각각이 가중치 역할을 한다. (위의 LSTM 구조 다시 참조)
+
+## 2. cell state 업데이트
+시점 t에 대한 cell state 업데이트 식:
+
+![](/images/../../AI-Study-2024/images/2025-01-02-19-45-24.png)
+
+
+![](/images/../../AI-Study-2024/images/2025-01-02-19-42-46.png)
+
+즉, Forget gate가 이전 Cell state의 중요도를 결정해줌.
+
+![](/images/../../AI-Study-2024/images/2025-01-02-19-44-46.png)
+
+즉, Input 데이터가 현재 정보의 중요도 결정
+
+*=> 불필요한 정보는 잊고, 추가할 정보는 추가해서 **cell state**를 구성*
+
+## 3. hidden state 업데이트
+최종적으로 단기적 정보 hidden state를 업데이트
+
+![](/images/../../AI-Study-2024/images/2025-01-02-19-49-48.png)
+
+즉, Output gate: 어떤 정보를 output으로 내보낼지 결정!
+
+## LSTM 전체 구조 정리
+![](/images/../../AI-Study-2024/images/2025-01-02-19-52-50.png)
 
 # 게이트 순환 유닛(Gated Recurrent Unit, GRU)
 LSTM의 장기 의존성 문제에 대한 해결책을 유지하면서, 은닉 상태를 업데이트하는 계산을 줄여 LSTM의 구조를 간단화
 
+LSTM에서는 출력, 입력, 삭제 게이트라는 3개의 게이트가 존재한 반면, GRU에서는 업데이트 게이트와 리셋 게이트 두 가지 게이트만이 존재. But GRU는 LSTM보다 학습 속도가 빠르면서도 LSTM과 비슷한 성능을 보인다.
  
+경험적으로 데이터 양이 적을 때는 매개 변수의 양이 적은 GRU가 조금 더 낫고, 데이터 양이 더 많으면 LSTM이 더 낫다고도 함.
 
+# 오늘의 회고
+GPT2 영어 모델에 넣을 데이터 전처리와, 기본 틀을 정리한 날이다. 오후에는 자연어 처리 스터디 준비를 했다. 다음주부터 본격적으로 쿠버네티스 스터디가 시작되니, 그전에 도커 개념을 잘 이해하고 혼자 연습해봐야겠다. 아래 도커 강의의 도움을 받고 있다.   
+[추석특집 도커 (Docker) 기초 강의 몰아보기](https://www.youtube.com/watch?v=IqnAiM1A0d8&list=PLlTylS8uB2fDLJRJCXqUowsOViG-ZKnWy&index=16)
+
+[v] 개인과제 제출
+[v] 월, 화 TIL 일단 초안으로 제출
+[v] GPT2 모델 구현 -> 내일 마저
+[v] 2시 회의
+[v] 3시 쿠버네티스 스터디
+[] FastAPI, 장고 공부 -> 내일
+[v] 자연어 처리 자료 정리!!
+[v] 7시 반 자연어 처리 스터디
