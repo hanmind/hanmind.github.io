@@ -12,6 +12,7 @@ toc: true
 last_modified_at: 2025-01-02
 thumbnail: ../images/2024-12-04-11-03-02.png
 ---
+![](/images/../images/2024-12-04-11-03-02.png)
 
 # 08. 순환 신경망(Recurrent Neural Network)
 피드 포워드 신경망은 입력의 길이가 고정되어 있어 자연어 처리를 위한 신경망으로는 한계가 있었다. 다양한 길이의 입력 시퀀스를 처리할 수 있는 순환 신경망 - 바닐라 RNN, 이를 개선한 LSTM, GRU -를 공부해보자.
@@ -19,13 +20,13 @@ thumbnail: ../images/2024-12-04-11-03-02.png
 # 순환 신경망(Recurrent Neural Network, RNN)
 입력과 출력을 시퀀스 단위로 처리하는 시퀀스(Sequence) 모델 중 가장 기본적인 인공 신경망 시퀀스 모델
 
-![](https://wikidocs.net/images/page/22886/rnn_image1_ver2.PNG)     
+![](https://wikidocs.net/images/page/22886/rnn_image1_ver2.PNG)      
 (편향 b도 입력으로 존재할 수 있지만 당분간 그림에서는 생략)
 셀: RNN에서 은닉층에서 활성화 함수를 통해 결과를 내보내는 역할을 하는 노드. 메모리 셀 또는 RNN 셀이라고도 함.
 
-![](/images/../../AI-Study-2024/images/2025-01-02-18-32-52.png)
+![](/images/../images/2025-01-02-18-32-52.png)
 
-![](/images/../../AI-Study-2024/images/2025-01-02-18-38-41.png)
+![](/images/../images/2025-01-02-18-38-41.png)
 
 RNN은 시점마다 파라미터가 같다고 가정함 => Parameter Sharing!   
 그래서 파라미터가 많아보이더라도 사실상 세 개다.
@@ -38,12 +39,12 @@ Many to many 구조:
 - 예시: 영어 문장 -> 한글 문장 번역
 
 ### Sequence to Sequence (seq2seq)
-![](/images/../../AI-Study-2024/images/2025-01-02-18-41-57.png)
+![](/images/../images/2025-01-02-18-41-57.png)
 4번째 그림: 입력이 다 끝나고 출력이 이루어지는 구조
 
 - L_t = y_t와 yhat_t의 차이
 - 1 to many, many to many의 구조에서는 **각 시점별 loss의 평균**을 전체 loss로 활용
-![](/images/../../AI-Study-2024/images/2025-01-02-18-52-32.png)
+![](/images/../images/2025-01-02-18-52-32.png)
 
 ## 양방향 순환 신경망(Bidirectional Recurrent Neural Network)
 시점 t에서의 출력값을 예측할 때 이전 시점의 입력뿐만 아니라, 이후 시점의 입력 또한 예측에 기여할 수 있는 순환 신경망
@@ -73,33 +74,33 @@ Many to many 구조:
 LSTM은 은닉층의 메모리 셀에 입력 게이트, 망각 게이트, 출력 게이트를 추가하여 불필요한 기억을 지우고, 기억해야할 것들을 정함. 
 => 은닉 상태(hidden state)를 계산하는 식이 전통적인 RNN보다 조금 더 복잡해졌으며 **셀 상태(cell state)**라는 값이 추가됨.  
 ## LSTM 구조
-![](/images/../../AI-Study-2024/images/2025-01-02-19-25-59.png)
+![](/images/../images/2025-01-02-19-25-59.png)
 
 세 개의 Gate, Cell state 개념이 사용됨.
 
 ## 1. 세 개의 Gate 계산
 ### Forget gate 
-![](/images/../../AI-Study-2024/images/2025-01-02-19-28-50.png)
+![](/images/../images/2025-01-02-19-28-50.png)
 
 ### Input gate
-![](/images/../../AI-Study-2024/images/2025-01-02-19-35-35.png)
+![](/images/../images/2025-01-02-19-35-35.png)
 
 ### Output gate  
-![](/images/../../AI-Study-2024/images/2025-01-02-19-37-08.png)
+![](/images/../images/2025-01-02-19-37-08.png)
 
 => 세 개의 게이트 각각이 가중치 역할을 한다. (위의 LSTM 구조 다시 참조)
 
 ## 2. cell state 업데이트
 시점 t에 대한 cell state 업데이트 식:
 
-![](/images/../../AI-Study-2024/images/2025-01-02-19-45-24.png)
+![](/images/../images/2025-01-02-19-45-24.png)
 
 
-![](/images/../../AI-Study-2024/images/2025-01-02-19-42-46.png)
+![](/images/../images/2025-01-02-19-42-46.png)
 
 즉, Forget gate가 이전 Cell state의 중요도를 결정해줌.
 
-![](/images/../../AI-Study-2024/images/2025-01-02-19-44-46.png)
+![](/images/../images/2025-01-02-19-44-46.png)
 
 즉, Input 데이터가 현재 정보의 중요도 결정
 
@@ -108,12 +109,12 @@ LSTM은 은닉층의 메모리 셀에 입력 게이트, 망각 게이트, 출력
 ## 3. hidden state 업데이트
 최종적으로 단기적 정보 hidden state를 업데이트
 
-![](/images/../../AI-Study-2024/images/2025-01-02-19-49-48.png)
+![](/images/../images/2025-01-02-19-49-48.png)
 
 즉, Output gate: 어떤 정보를 output으로 내보낼지 결정!
 
 ## LSTM 전체 구조 정리
-![](/images/../../AI-Study-2024/images/2025-01-02-19-52-50.png)
+![](/images/../images/2025-01-02-19-52-50.png)
 
 # 게이트 순환 유닛(Gated Recurrent Unit, GRU)
 LSTM의 장기 의존성 문제에 대한 해결책을 유지하면서, 은닉 상태를 업데이트하는 계산을 줄여 LSTM의 구조를 간단화
