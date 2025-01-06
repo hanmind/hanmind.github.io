@@ -10,9 +10,9 @@ tags:
 toc: true
 
 last_modified_at: 2024-12-06
-thumbnail: ../images/2024-12-04-11-03-02.png
+thumbnail: ../images/TIL.png
 ---
-![](/images/../images/2024-12-04-11-03-02.png)
+![](/images/../images/TIL.png)
 
 # VSCode에서 마크다운 환경 마련하기
 ![](/images/../images/2024-12-06-11-07-04.png)

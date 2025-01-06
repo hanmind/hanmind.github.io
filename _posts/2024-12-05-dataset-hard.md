@@ -12,9 +12,9 @@ tags:
 toc: true
 
 last_modified_at: 2024-12-05
-thumbnail: ../images/2024-12-04-11-03-02.png
+thumbnail: ../images/TIL.png
 ---
-![](/images/../images/2024-12-04-11-03-02.png)
+![](/images/../images/TIL.png)
 
 # 코드 개선
 

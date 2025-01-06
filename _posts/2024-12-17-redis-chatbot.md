@@ -10,7 +10,7 @@ tags:
 toc: true
 
 last_modified_at: 2024-12-17
-thumbnail: ../images/2024-12-04-11-03-02.png
+thumbnail: ../images/TIL.png
 ---
 
 # Redis와 FastAPI로 간단 챗봇 만들기 1

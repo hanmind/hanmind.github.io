@@ -10,9 +10,9 @@ tags:
 toc: true
 
 last_modified_at: 2025-01-02
-thumbnail: ../images/2024-12-04-11-03-02.png
+thumbnail: ../images/TIL.png
 ---
-![](/images/../images/2024-12-04-11-03-02.png)
+![](/images/../images/TIL.png)
 
 # 08. 순환 신경망(Recurrent Neural Network)
 피드 포워드 신경망은 입력의 길이가 고정되어 있어 자연어 처리를 위한 신경망으로는 한계가 있었다. 다양한 길이의 입력 시퀀스를 처리할 수 있는 순환 신경망 - 바닐라 RNN, 이를 개선한 LSTM, GRU -를 공부해보자.

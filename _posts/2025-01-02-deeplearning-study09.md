@@ -10,7 +10,7 @@ tags:
 toc: true
 
 last_modified_at: 2025-01-02
-thumbnail: ../images/2024-12-04-11-03-02.png
+thumbnail: ../images/TIL.png
 ---
 
 # 09. 워드 임베딩(Word Embedding)

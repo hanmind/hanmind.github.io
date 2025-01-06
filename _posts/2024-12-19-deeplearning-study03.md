@@ -10,7 +10,7 @@ tags:
 toc: true
 
 last_modified_at: 2024-12-19
-thumbnail: ../images/2024-12-04-11-03-02.png
+thumbnail: ../images/TIL.png
 ---
 
 # 03. 언어 모델

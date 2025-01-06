@@ -14,7 +14,7 @@ tags:
 toc: true
 
 last_modified_at: 2024-12-23
-thumbnail: ../images/2024-12-04-11-03-02.png
+thumbnail: ../images/TIL.png
 ---
 
 # 05. 벡터의 유사도

@@ -12,9 +12,9 @@ tags:
 toc: true
 
 last_modified_at: 2024-12-13
-thumbnail: ../images/2024-12-04-11-03-02.png
+thumbnail: ../images/TIL.png
 ---
-![](/images/../images/2024-12-04-11-03-02.png)
+![](/images/../images/TIL.png)
 
 
 본 게시글은 아래 유튜브 강의를 바탕으로 Redis를 공부하며 정리한 내용입니다.   

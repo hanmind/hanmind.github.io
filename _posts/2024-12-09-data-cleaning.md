@@ -11,9 +11,9 @@ tags:
 toc: true
 
 last_modified_at: 2024-12-09
-thumbnail: ../images/2024-12-04-11-03-02.png
+thumbnail: ../images/TIL.png
 ---
-![](/images/../images/2024-12-04-11-03-02.png)
+![](/images/../images/TIL.png)
 
 # 데이터 전처리
 🔎 궁금한 점: 데이터 불균형 vs 데이터 부족   
