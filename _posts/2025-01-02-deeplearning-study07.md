@@ -1,5 +1,5 @@
 ---
-title:  "딥러닝 - 07. 딥 러닝"
+title:  "(WIL) 딥러닝 - 07. 딥 러닝"
 excerpt: "퍼셉트론: 다수의 입력으로부터 하나의 결과를 내보내는 알고리즘   
 x: 입력값 
 w: 가중치(Weight) 
@@ -15,6 +15,7 @@ toc: true
 last_modified_at: 2025-01-02
 thumbnail: ../images/TIL.png
 ---
+![](/images/../images/TIL.png)
 
 # 07. 딥러닝
 
