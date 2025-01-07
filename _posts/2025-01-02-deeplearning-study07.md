@@ -1,6 +1,9 @@
 ---
 title:  "딥러닝 - 07. 딥 러닝"
-excerpt: ""
+excerpt: "퍼셉트론: 다수의 입력으로부터 하나의 결과를 내보내는 알고리즘   
+x: 입력값 
+w: 가중치(Weight) 
+y: 출력값"
 
 categories:
   - Deep Learning
@@ -110,3 +113,7 @@ dying ReLU를 보완한 함수 중 하나가 Leaky ReLU이다. Leaky ReLU는 입
 ### 3. 가중치 초기화(Weight initialization)
 ### 4. 배치 정규화(Batch Normalization)
 ### 5. 층 정규화(Layer Normalization)
+
+# 이주의 회고
+자연어 처리 스터디가 슬슬 어렵네요.   
+저의 태도는 저번주보다는 나았어요. 그렇지만 강의들이 밀린 것은 스노우볼이 더 커지기 전에 꾸준히 상쇄해나가야겠습니다. 주말에 할 생각보다, 주어진 시간에 집중합시다.
