@@ -1,6 +1,8 @@
 ---
-title:  "딥러닝 - 10. RNN을 이용한 텍스트 분류(Text Classification)"
-excerpt: ""
+title:  "(TIL) 딥러닝 - 10. RNN을 이용한 텍스트 분류(Text Classification)"
+excerpt: " 10. RNN을 이용한 텍스트 분류(Text Classification)
+텍스트 분류(Text Classification): 텍스트가 어떤 종류의 범주에 속하는지 구분하는 작업    
+예시) 영화 리뷰와 같은 텍스트를 입력 받아서 이 리뷰가 긍정 리뷰인지 부정 리뷰인지를 분류하는 '감성 분석',"
 
 categories:
   - Deep Learning
@@ -9,9 +11,10 @@ tags:
 
 toc: true
 
-last_modified_at: 2025-01-02
+last_modified_at: 2025-01-08
 thumbnail: ../images/TIL.png
 ---
+![](/images/../images/TIL.png)
 
 # 10. RNN을 이용한 텍스트 분류(Text Classification)
 텍스트 분류(Text Classification): 텍스트가 어떤 종류의 범주에 속하는지 구분하는 작업    
@@ -47,11 +50,11 @@ thumbnail: ../images/TIL.png
 나이브 베이즈 분류기에서 토큰화 이전의 단어의 순서는 중요하지 않다. BoW와 같이 오직 빈도수만을 고려함.
 
 
-![](2025-01-09-18-07-05.png)
+![](/images/../images/2025-01-09-18-07-05.png)
 
 
 ### 나이브 베이즈 주의사항
-![](2025-01-09-18-09-16.png)
+![](/images/../images/2025-01-09-18-09-16.png)
 
 - 입력 텍스트에 대해서 단, 하나의 단어라도 훈련 텍스트에 없었다면 확률 전체가 0이 되는 것은 지나친 일반화
 - 정상 메일에 lottery가 단 한 번도 등장하지 않았고, 그 이유로 정상 메일일 확률 자체가 0%가 되어버림
