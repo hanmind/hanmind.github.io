@@ -1,6 +1,7 @@
 ---
 title:  "(WIL) 딥러닝 - 12. 태깅 작업(Tagging Task)"
-excerpt: ""
+excerpt: "케라스를 이용한 태깅 작업 개요(Tagging Task using Keras)
+여기서는 자연어 처리에서 중요한 태깅 작업과 이를 위한 양방향 LSTM 활용에 대해 다룬다."
 
 categories:
   - Deep Learning
@@ -105,3 +106,83 @@ print('테스트 샘플 레이블의 크기 : {}'.format(y_test.shape))
 테스트 샘플 레이블의 크기 : (783, 150)
 ```
 
+### 양방향 LSTM으로 POS Tagger 만들기
+- 임베딩 벡터의 차원과 LSTM의 은닉 상태의 차원은 128로 지정
+- 다대다 문제이므로 LSTM의 return_sequences의 값은 True로 지정
+- 방향 사용을 위해 LSTM을 Bidirectional()로 감쌈
+- validation_data로는 테스트 데이터를 기재하여 학습 중간에 테스트 데이터의 정확도 확인함 (테스트 데이터를 검증에 쓰는 경우는 못봤는데, 이 교재에서는 단순 실습이라 그런지 이렇게 했더라.)
+- 레이블에 대해서 원-핫 인코딩을 하고 손실 함수를 categorical_crossentropy를 사용할 수도 있겠지만, 만약 레이블에 원-핫 인코딩을 하지 않고 학습을 진행하고자 한다면 categorical_crossentropy 대신 sparse_categorical_crossentropy를 선택 -> 여기선 후자
+
+```py
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, LSTM, InputLayer, Bidirectional, TimeDistributed, Embedding
+from tensorflow.keras.optimizers import Adam
+
+embedding_dim = 128
+hidden_units = 128
+
+model = Sequential()
+model.add(Embedding(vocab_size, embedding_dim, mask_zero=True))
+model.add(Bidirectional(LSTM(hidden_units, return_sequences=True)))
+model.add(TimeDistributed(Dense(tag_size, activation=('softmax'))))
+
+model.compile(loss='sparse_categorical_crossentropy', optimizer=Adam(0.001), metrics=['accuracy'])
+model.fit(X_train, y_train, batch_size=128, epochs=7, validation_data=(X_test, y_test))
+
+print("\n 테스트 정확도: %.4f" % (model.evaluate(X_test, y_test)[1]))
+```
+
+결과:   
+```
+25/25 [==============================] - 0s 6ms/step - loss: 0.0720 - accuracy: 0.9016
+테스트 정확도: 0.9016
+```
+
+실제로 맞추고 있는지를 특정 테스트 샘플(10번 인덱스)을 통해 확인해보자. 
+
+```py
+index_to_word = src_tokenizer.index_word
+index_to_tag = tar_tokenizer.index_word
+
+i = 10 # 확인하고 싶은 테스트용 샘플의 인덱스.
+y_predicted = model.predict(np.array([X_test[i]])) # 입력한 테스트용 샘플에 대해서 예측값 y를 리턴
+y_predicted = np.argmax(y_predicted, axis=-1) # 확률 벡터를 정수 레이블로 변환.
+
+print("{:15}|{:5}|{}".format("단어", "실제값", "예측값"))
+print(35 * "-")
+
+for word, tag, pred in zip(X_test[i], y_test[i], y_predicted[0]):
+    if word != 0: # PAD값은 제외함.
+        print("{:17}: {:7} {}".format(index_to_word[word], index_to_tag[tag].upper(), index_to_tag[pred].upper()))
+```
+
+결과:   
+```
+단어             |실제값  |예측값
+-----------------------------------
+in               : IN      IN
+addition         : NN      NN
+,                : ,       ,
+buick            : NNP     NNP
+is               : VBZ     VBZ
+a                : DT      DT
+relatively       : RB      RB
+respected        : VBN     VBN
+nameplate        : NN      NN
+among            : IN      IN
+american         : NNP     NNP
+express          : NNP     NNP
+card             : NN      NN
+holders          : NNS     NNS
+,                : ,       ,
+says             : VBZ     VBZ
+0                : -NONE-  -NONE-
+*t*-1            : -NONE-  -NONE-
+an               : DT      DT
+american         : NNP     NNP
+express          : NNP     NNP
+spokeswoman      : NN      NN
+.                : .       .
+```
+
+과하리만치 정확하다. 내 생각엔 validation_data에 (X_test, y_test)를 써서 더 그럴 수 있을 것 같다.
