@@ -176,7 +176,7 @@ Reference2 : there is a cat on the mat
 
 -> 이를 보정하기 위해, 분자 계산시 Ca의 유니그램이 이미 Ref에서 매칭된 적이 있었는지를 고려
 
-![](images/../images/2025-01-16-19-25-17.png)
+![](/images/../images/2025-01-16-19-25-17.png)
 
 Count_clip = min(7, 2) = 2      
 => MUP = 2/7로 보정
