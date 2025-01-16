@@ -148,12 +148,14 @@ Watch me.           Regardez-moi !
 - PPL과는 달리 높을 수록 성능이 더 좋음을 의미
 
 ### 1) 단어 개수 카운트로 측정하기(Unigram Precision)
+```
 Example 1
 Candidate1 : It is a guide to action which ensures that the military always obeys the commands of the party.
 Candidate2 : It is to insure the troops forever hearing the activity guidebook that party direct.
 Reference1 : It is a guide to action that ensures that the military will forever heed Party commands.
 Reference2 : It is the guiding principle which guarantees the military forces always being under the command of the Party.
 Reference3 : It is the practical guide for the army always to heed the directions of the party.
+```
 
 - 유니그램 정밀도(Unigram Precision)        
 ![](../images/2025-01-16-19-19-15.png)      
@@ -163,16 +165,18 @@ Ca1의 단어들은 얼추 훑어만봐도 Ref1, Ref2, Ref3에서 전반적으�
 ![](../images/2025-01-16-19-20-52.png)
 
 ### 2) 중복을 제거하여 보정하기(Modified Unigram Precision)
+```
 Example 2
 Candidate : the the the the the the the
 Reference1 : the cat is on the mat
 Reference2 : there is a cat on the mat
+```
 
 유니그램 정밀도에 따르면 7/7=1이라는 최고의 성능을 받게 되어버림
 
 -> 이를 보정하기 위해, 분자 계산시 Ca의 유니그램이 이미 Ref에서 매칭된 적이 있었는지를 고려
 
-![](../images/2025-01-16-19-25-17.png)
+![](images/../images/2025-01-16-19-25-17.png)
 
 Count_clip = min(7, 2) = 2      
 => MUP = 2/7로 보정
