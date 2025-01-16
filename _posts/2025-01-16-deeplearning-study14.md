@@ -158,11 +158,11 @@ Reference3 : It is the practical guide for the army always to heed the direction
 ```
 
 - 유니그램 정밀도(Unigram Precision)        
-![](../images/2025-01-16-19-19-15.png)      
+![](/images/../images/2025-01-16-19-19-15.png)      
 
 Ca1의 단어들은 얼추 훑어만봐도 Ref1, Ref2, Ref3에서 전반적으로 등장하는 반면, Ca2는 그렇지 않다. 이는 Ca1이 Ca2보다 더 좋은 번역 문장임을 의미
 
-![](../images/2025-01-16-19-20-52.png)
+![](/images/../images/2025-01-16-19-20-52.png)
 
 ### 2) 중복을 제거하여 보정하기(Modified Unigram Precision)
 ```
