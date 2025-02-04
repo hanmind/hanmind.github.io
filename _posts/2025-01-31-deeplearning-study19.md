@@ -1,6 +1,9 @@
 ---
 title:  "(TIL) 자연어 처리 - 19. GPT(Generative Pre-trained Transformer)"
-excerpt: " "
+excerpt: "# 19. GPT(Generative Pre-trained Transformer)
+
+BERT가 트랜스포머의 인코더로 설계된 모델
+GPT는 트랜스포머의 디코더로 설계된 모델이다."
 
 categories:
   - Deep Learning
@@ -9,7 +12,7 @@ tags:
 
 toc: true
 
-last_modified_at: 2025-01-31
+last_modified_at: 2025-01-29
 thumbnail: ../images/TIL.png
 ---
 ![](/images/../images/TIL.png)

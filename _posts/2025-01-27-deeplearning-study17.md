@@ -1,6 +1,7 @@
 ---
 title:  "(TIL) 자연어 처리 - 17. BERT"
-excerpt: " "
+excerpt: "# 17. BERT
+트랜스포머(transformer)의 등장 이후 다양한 자연어 처리 태스크에서 사용되었던 RNN 계열의 신경망인 LSTM, GRU는 트랜스포머로 대체되어가는 추세이다. "
 
 categories:
   - Deep Learning
@@ -9,13 +10,13 @@ tags:
 
 toc: true
 
-last_modified_at: 2025-01-31
+last_modified_at: 2025-01-27
 thumbnail: ../images/TIL.png
 ---
 ![](/images/../images/TIL.png)
 
 # 17. BERT
-트랜스포머(transformer)의 등장 이후 다양한 자연어 처리 태스크에서 사용되었던 RNN 계열의 신경망인 LSTM, GRU는 트랜스포머로 대체되어가는 추세입니다. 이에 따라 다양한 트랜스포머 계열의 BERT, GPT, T5 등 다양한 사전 훈련된 언어 모델들이 계속해서 등장하고 있다.
+트랜스포머(transformer)의 등장 이후 다양한 자연어 처리 태스크에서 사용되었던 RNN 계열의 신경망인 LSTM, GRU는 트랜스포머로 대체되어가는 추세이다. 이에 따라 다양한 트랜스포머 계열의 BERT, GPT, T5 등 다양한 사전 훈련된 언어 모델들이 계속해서 등장하고 있다.
 
 ## 17-01 NLP에서의 사전 훈련(Pre-training)
 
