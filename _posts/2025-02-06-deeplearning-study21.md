@@ -30,9 +30,9 @@ BoW에 기반한 DTM이나 TF-IDF의 단점: 기본적으로 단어의 빈도를
 => 잠재 의미 분석(Latent Semantic Analysis, LSA): DTM의 잠재된(Latent) 의미를 이끌어내는 방법!
 
 ## 특이값 분해 관련 용어 정리
-![](../images/2025-02-06-18-38-30.png)
+![](/images/../images/2025-02-06-18-38-30.png)
 
-![](../images/2025-02-06-18-38-43.png)
+![](/images/../images/2025-02-06-18-38-43.png)
 
 - 전치 행렬(transposed matrix): 원래의 행렬에서 행과 열을 바꾼 행렬
 
@@ -47,18 +47,16 @@ BoW에 기반한 DTM이나 TF-IDF의 단점: 기본적으로 단어의 빈도를
 
 - **직교행렬(Orthogonal matrix)**: 실수 n*n 행렬 A에 대해서 A x A^T = I를 만족하면서 A^T x A = I을 만족하는 행렬 
 
-- 단위행렬: 주대각선을 제외한 곳의 원소가 모두 0인 행렬   
-![](../images/2025-02-06-18-28-43.png)
-
 - **대각행렬(diagonal matrix)**: 주대각선을 제외한 곳의 원소가 모두 0인 행렬
+![](/images/../images/2025-02-06-18-28-43.png)
 
 ## 선형 변환의 관점에서 네 개의 행렬(A,V,Σ,U)의 관계
-![](../images/2025-02-06-18-46-02.png)
+![](/images/../images/2025-02-06-18-46-02.png)
 
 ❗ **SVD를 통해 나온 대각 행렬 Σ의 추가적인 성질**    
 대각 행렬 Σ의 주대각원소를 행렬 A의 특이값(singular value)라고 하며, 이 특이값은 내림차순으로 정렬됨
 
-![](../images/2025-02-06-18-34-04.png)
+![](/images/../images/2025-02-06-18-34-04.png)
 
 ![](https://wikidocs.net/images/page/24949/svd%EC%99%80truncatedsvd.PNG)
 
