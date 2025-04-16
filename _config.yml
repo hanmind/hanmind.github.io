@@ -1,27 +1,81 @@
+# 기본 사이트 정보
 title: "Sadie's AI & Data Science!"
 description: "Here do I record my study."
 author: "Sadie"
-email: sh.sadiehan@gmail.com
-baseurl: "" # 리포지토리 이름이 URL에 포함되지 않으면 빈 값
-url: "https://hanmind.github.io" # 깃허브 페이지 주소
+email: "sh.sadiehan@gmail.com"
 
+# GitHub Pages 주소
+url: "https://hanmind.github.io"
+baseurl: ""  # username.github.io이면 빈값
+
+# 원격 테마 사용
 remote_theme: "jeffreytse/jekyll-theme-yat"
 
-paginate: 5
+# 블로그 설정
+lang: "en"
+timezone: "Asia/Seoul"
 permalink: /:title/
+paginate: 5
 
+# YAT 테마 설정
+yat:
+  theme_color: "dark"  # light or dark
+  brand_img: "/assets/images/avatar.png"  # favicon 또는 브랜드 이미지
+  slogan: "Digital well-being and HCI adventures"
+  date_format: "%Y-%m-%d"
+  back_to_top: true
+  scroll_to_read: true
+  footer:
+    copyright: "© 2025 Sadie. All rights reserved."
+    email: "sh.sadiehan@gmail.com"
+    github: "https://github.com/hanmind"
+    instagram: "https://instagram.com/"
+    twitter: "https://twitter.com/"
+  toc:
+    enable: true  # 글에서 목차 사용
+  post:
+    readtime: true
+    date: true
+
+# 소셜 링크
+social_links:
+  github: https://github.com/hanmind
+  instagram: https://instagram.com/
+  twitter: https://twitter.com/
+  email: mailto:sh.sadiehan@gmail.com
+
+# 작성자 정보 (선택적)
+author_info:
+  name: "Sadie"
+  bio: "An explorer passionate about digital well-being and HCI. Dedicated to creating human-centered AI services."
+  avatar: "/assets/images/avatar.png"
+  location: "South Korea"
+
+# 플러그인
 plugins:
   - jekyll-remote-theme
   - jekyll-paginate
   - jekyll-feed
   - jekyll-sitemap
 
-yat:
-  theme_color: "light" # 또는 "dark"
-  header:
-    title: "Sadie's AI & Data Science!"
-    slogan: "Digital well-being and HCI adventures"
-  footer:
-    copyright: "© 2025 Sadie. All rights reserved."
-    github: "https://github.com/hanmind"
-    email: "sh.sadiehan@gmail.com"
+# 마크다운 처리
+markdown: kramdown
+kramdown:
+  input: GFM
+highlighter: rouge
+
+# 출력 제외 항목
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+
+# 기본 레이아웃 설정
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
