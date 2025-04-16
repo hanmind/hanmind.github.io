@@ -98,12 +98,6 @@ gallery:
 
 And then drop-in the gallery include --- gallery `caption` is optional.
 
-```liquid
-{% raw %}{% include gallery caption="This is a sample gallery with **Markdown support**." %}{% endraw %}
-```
-
-{% raw %}{% include gallery caption="This is a sample gallery with **Markdown support**." %}{% endraw %}
-
 This is some text after the gallery just to make sure that everything aligns properly.
 
 Here comes another gallery, this time set the `id` to match 2nd gallery hash in YAML Front Matter.
