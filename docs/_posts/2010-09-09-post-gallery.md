@@ -120,23 +120,3 @@ gallery2:
     image_path: https://farm5.staticflickr.com/4046/4697502929_72c612c636_q.jpg
     alt: "Fog in the trees"
 ```
-
-And place it like so: 
-
-```liquid
-{% raw %}{% include gallery id="gallery2" caption="This is a second gallery example with images hosted externally." %}{% endraw %}
-```
-
-{% raw %}{% include gallery id="gallery2" caption="This is a second gallery example with images hosted externally." %}{% endraw %}
-
-And for giggles one more gallery just to make sure this works. To fill page content container add `class="full"`.
-
-{% raw %}{% include gallery id="gallery3" class="full" caption="This is a third gallery example with two images and fills the entire content container." %}{% endraw %}
-
-Gallery column layout can be overrided by setting a `layout`.
-
-```liquid
-{% raw %}{% include gallery id="gallery" layout="half" caption="This is a half gallery layout example." %}{% endraw %}
-```
-
-{% raw %}{% include gallery id="gallery" layout="half" caption="This is a half gallery layout example." %}{% endraw %}
