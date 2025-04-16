@@ -102,7 +102,7 @@ And then drop-in the gallery include --- gallery `caption` is optional.
 {% raw %}{% include gallery caption="This is a sample gallery with **Markdown support**." %}{% endraw %}
 ```
 
-{% include gallery caption="This is a sample gallery with **Markdown support**." %}
+{% raw %}{% include gallery caption="This is a sample gallery with **Markdown support**." %}{% endraw %}
 
 This is some text after the gallery just to make sure that everything aligns properly.
 
@@ -127,11 +127,11 @@ And place it like so:
 {% raw %}{% include gallery id="gallery2" caption="This is a second gallery example with images hosted externally." %}{% endraw %}
 ```
 
-{% include gallery id="gallery2" caption="This is a second gallery example with images hosted externally." %}
+{% raw %}{% include gallery id="gallery2" caption="This is a second gallery example with images hosted externally." %}{% endraw %}
 
 And for giggles one more gallery just to make sure this works. To fill page content container add `class="full"`.
 
-{% include gallery id="gallery3" class="full" caption="This is a third gallery example with two images and fills the entire content container." %}
+{% raw %}{% include gallery id="gallery3" class="full" caption="This is a third gallery example with two images and fills the entire content container." %}{% endraw %}{% endraw %}
 
 Gallery column layout can be overrided by setting a `layout`.
 
@@ -139,4 +139,4 @@ Gallery column layout can be overrided by setting a `layout`.
 {% raw %}{% include gallery id="gallery" layout="half" caption="This is a half gallery layout example." %}{% endraw %}
 ```
 
-{% include gallery id="gallery" layout="half" caption="This is a half gallery layout example." %}
+{% raw %}{% include gallery id="gallery" layout="half" caption="This is a half gallery layout example." %}{% endraw %}
